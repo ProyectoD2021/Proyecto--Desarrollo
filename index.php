@@ -6,10 +6,7 @@
 
 	$sql="SELECT * from usuarios where email='admin'";
 	$result=mysqli_query($conexion,$sql);
-	$validar=0;
-	if(mysqli_num_rows($result) > 0){
-		$validar=1;
-	}
+	
  ?>
 
 
@@ -40,9 +37,10 @@
 							<input type="password" name="password" id="password" class="form-control input-sm">
 							<p></p>
 							<span class="btn btn-primary btn-sm" id="entrarSistema">Entrar</span>
-							<?php  if(!$validar): ?>
+							
 							<a href="registro.php" class="btn btn-danger btn-sm">Registrar</a>
-							<?php endif; ?>
+              <a href="index.html" class="btn btn-success btn-sm">Regresar</a>
+							
 						</form>
 					</div>
 				</div>
